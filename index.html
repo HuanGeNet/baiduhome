@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<title>Home</title>
+</head>
+<style>
+/*下方这句不动它，翻译开始*/
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	text-align: center;
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+ 	background-color: #fff;
+}
+img.smaller {
+	width: 168px;
+	height: 54px;
+	max-width: 1000px;
+	pointer-events: none;
+}
+.user-select { 
+   -webkit-user-select: none;
+}
+#search_input {
+	width: 90%;
+	height: 48px;
+	background-color: transparent;
+	border: none;
+	outline: 0;
+	font-size: 18px;
+	color: #000000;
+	padding: 0 12px;
+	border-radius: 50px
+}
+.search_part {
+	margin-bottom: 30px;
+	margin-top: 69px;
+}
+span {
+	display: block;
+	overflow: hidden;
+	padding-left: 5px;
+	vertical-align: middle;
+}
+.search_bar {
+box-shadow: 0 0 0px rgba(255,255,255,1);
+	background-color: rgba(242,243,245,1);
+	border-radius: 50px;
+	display: table;
+	vertical-align: middle;
+	width: 90%;
+	border:0px solid #ffffff;
+	height: 48px;
+	max-width: 400px;
+	margin: 33px auto;
+}
+#search_submit {
+	outline: 0;
+	height: 48px;
+	float: right;
+	color: #fff;
+	border-radius: 50px;
+	font-size: 16px;
+	font-weight: 700;
+	border: none;
+	background-color:rgba(242,243,245,1);
+	padding: 0 13px 0 13px
+}
+#content {
+	width: 100%;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+
+</style>
+
+<body>
+<div id="content">
+<br />
+<div class="search_part">
+
+<img class="smaller" src="logo.png"/>
+<br />
+<form onsubmit="return search()" class="search_bar">
+<input type="submit" id="search_submit" value="Go" >
+<span><input class="search" type="text" value="" autocomplete="off" id="search_input" ></span>
+</form>
+</div>
+<br />
+</div>
+<span class="user-select" style="font-size: 16px; font-weight: bold;"><script type="text/javascript" src="https://api.lwl12.com/hitokoto/v1?encode=js&charset=utf-8"></script><div id="lwlhitokoto"><script>lwlhitokoto()</script></div></script></span>
+
+
+<script type="text/javascript">function search(){if(document.getElementById("search_input").value != ""){window.location.href = "https://m.baidu.com/s?from=&wd=" + document.getElementById("search_input").value;document.getElementById("search_input").value = "";}return false;}</script>
+
+</body>
+
+</html>
